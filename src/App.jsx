@@ -24,7 +24,8 @@ function App() {
 
   const handleAddContact = (newContact) => {
     const isDuplicate = contacts.some(
-      (contact) => contact.name.toLowerCase() === newContact.name.toLowerCase()
+      (contact) =>
+        contact.name?.toLowerCase() === newContact.name?.toLowerCase()
     );
 
     if (isDuplicate) {
@@ -42,7 +43,7 @@ function App() {
   };
 
   const filteredContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
+    contact.name?.toLowerCase().includes(filter.toLowerCase())
   );
 
   return (
